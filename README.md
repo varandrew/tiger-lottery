@@ -3,7 +3,7 @@
 
 ## About Tiger Lottery
 
-<img src='https://github.com/varandrew/tiger-lottery/blob/main/screenshots/logo.png' height="200" width="200" />
+<img src='https://github.com/varandrew/tiger-lottery/blob/main/screenshots/log.png' height="200" width="200" />
 
 
 ## Screenshot
