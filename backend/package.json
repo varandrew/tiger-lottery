@@ -1,0 +1,16 @@
+{
+  "name": "tiger-lottery-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "compile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "varandrew",
+  "license": "MIT",
+  "dependencies": {
+    "solc": "^0.8.11",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "web3": "^1.6.1"
+  }
+}

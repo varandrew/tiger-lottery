@@ -1,0 +1,73 @@
+.main-app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-wrapper {
+    min-width: 600px;
+    min-height: 500px;
+    padding: 50px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .3);
+    backdrop-filter: blur(10px);
+}
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.cta-button {
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    min-width: 250px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.bet-button {
+    margin-top: 20px;
+    background: orange;
+}
+
+.connect-wallet-button {
+    background: rgb(32, 129, 226);
+}
+
+h1 {
+    display: inline;
+    font-family: 'Lobster';
+    text-align: center;
+    font-size: 36px;
+    line-height: 60px;
+    color: #fff;
+    cursor: pointer;
+}
+
+p {
+    font-size: 16px;
+    color: #000;
+}
+
+.display-text {
+    padding: 5px 10px;
+    background-color: rgb(246, 248, 250);
+    border-radius: 5px;
+}
+
+.yellow {
+    filter: brightness(110%);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffeb3b, 0 0 35px #ffeb3b, 0 0 40px #ffeb3b, 0 0 50px #ffeb3b, 0 0 75px #ffeb3b;
+    animation: yellow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes yellow {
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffeb3b, 0 0 70px #ffeb3b, 0 0 80px #ffeb3b, 0 0 100px #ffeb3b, 0 0 150px #ffeb3b;
+    }
+  }
