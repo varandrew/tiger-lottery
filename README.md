@@ -17,7 +17,7 @@
 
 ### Contract
 
-<img src="https://github.com/varandrew/my-home/blob/main/screenshots/contract.png" width="800" height="1200"/>
+<img src="https://github.com/varandrew/tiger-lottery/blob/main/screenshots/contract.png" width="800" height="1200"/>
 
 ## Project Layout
 
