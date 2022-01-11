@@ -3,21 +3,21 @@
 
 ## About Tiger Lottery
 
-<img src='screenshots/logo' height="200" width="200" />
+<img src='https://github.com/varandrew/tiger-lottery/blob/main/screenshots/log.png' height="200" width="200" />
 
 
 ## Screenshot
 
 ### App
-<img src="https://github.com/varandrew/tiger-lottery/blob/main/screenshots/app.png" width="647.5" height="1295"/>
+<img src="https://github.com/varandrew/tiger-lottery/blob/main/screenshots/app.png" width="1200" height="600"/>
 
 ### Remix
 
-<img src="https://github.com/varandrew/tiger-lottery/blob/main/screenshots/remix.png" width="647.5" height="1295"/>
+<img src="https://github.com/varandrew/tiger-lottery/blob/main/screenshots/remix.png" width="1200" height="600"/>
 
 ### Contract
 
-<img src="https://github.com/varandrew/my-home/blob/main/screenshots/contract.png" width="647.5" height="1295"/>
+<img src="https://github.com/varandrew/tiger-lottery/blob/main/screenshots/contract.png" width="800" height="1200"/>
 
 ## Project Layout
 
