@@ -1,11 +1,22 @@
 import { useEffect, useState } from "react";
-import "./App.css";
-import contract from "./contracts/Lottery.json";
 import { ethers } from "ethers";
-import logo from "./assets/logo.png";
+import { styled } from "@mui/material/styles";
+import Fab from "@mui/material/Fab";
+import Card from "@mui/material/Card";
+import Typography from "@mui/material/Typography";
+import DiamondIcon from "@mui/icons-material/Diamond";
+import contract from "./contracts/Lottery.json";
+import Logo from "./assets/logo.png";
+import "./App.css";
 
-const contractAddress = "0x0E68A4294Ed863b1131D3075366ec4E2E299E458";
+const contractAddress = "0xffFF59d8992712473d852eed6D5f08A9c5554365";
 const abi = contract.abi;
+
+const Div = styled("div")(({ theme }) => ({
+  ...theme.typography.button,
+  backgroundColor: theme.palette.background.paper,
+  padding: theme.spacing(1),
+}));
 
 function App() {
   const [flag, setFlag] = useState(true);
@@ -109,22 +120,43 @@ function App() {
 
   const betHandler = async () => {
     if (!contract) return;
-    console.log(
-      "🚀 ~ file: App.js ~ line 112 ~ betHandler ~ contract",
-      contract
-    );
-    await contract.bet();
+
+    const tx = await contract.bet({
+      from: currentAccount,
+      value: ethers.utils.parseEther("1"),
+      gasLimit: "3000000",
+    });
+
+    await tx.wait();
+    setFlag(true);
+  };
+
+  const drawHandler = async () => {
+    if (!contract) return;
+
+    const tx = await contract.draw({
+      from: currentAccount,
+      gasLimit: "3000000",
+    });
+
+    await tx.wait();
     setFlag(true);
   };
 
   const LotteryContent = () => {
     return (
       <div className="app-content">
-        <p>MANGER ADDRESS:</p>
-        <p className="display-text">{currentManger}</p>
-        <p>MY ADDRESS: </p>
-        <p className="display-text">{currentAccount}</p>
-        <p>{currentPlayerCount} PERSON PARTICIPATED</p>
+        <Typography mt={2} variant="h6" gutterBottom component="div">
+          MANGER ADDRESS:
+        </Typography>
+        <Div>{currentManger}</Div>
+        <Typography variant="h6" gutterBottom component="div">
+          MY ADDRESS:
+        </Typography>
+        <Div>{currentAccount}</Div>
+        <Typography mt={2} variant="overline" display="block" gutterBottom>
+          {currentPlayerCount} PERSON PARTICIPATED
+        </Typography>
 
         <div style={{ alignSelf: "center", textAlign: "center" }}>
           <div
@@ -161,11 +193,19 @@ function App() {
 
   return (
     <div className="main-app">
-      <div className="app-wrapper">
+      <Card className="app-wrapper">
         <h1 className="yellow">Tiger Lottery</h1>
-        <img src={logo} alt="tiger-logo" />
+        <img src={Logo} alt="tiger-logo" />
         <div>{currentAccount ? LotteryContent() : connectWalletButton()}</div>
-      </div>
+      </Card>
+
+      <Fab
+        sx={{ position: "absolute", bottom: 16, right: 16 }}
+        color="secondary"
+        aria-label="edit"
+      >
+        <DiamondIcon onClick={drawHandler} />
+      </Fab>
     </div>
   );
 }

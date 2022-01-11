@@ -7,7 +7,6 @@ const log = console.log;
 const { bytecode, abi } = compile.instantiateContract(
   "./contracts/Lottery.sol"
 );
-console.log("🚀 ~ file: deploy.js ~ line 8 ~ abi", abi, bytecode);
 
 const terms =
   "lucky frog exotic toy load sphere release pull powder off open exist";
