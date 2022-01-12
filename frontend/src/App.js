@@ -9,7 +9,7 @@ import contract from "./contracts/Lottery.json";
 import Logo from "./assets/logo.png";
 import "./App.css";
 
-const contractAddress = "0xffFF59d8992712473d852eed6D5f08A9c5554365";
+const contractAddress = "0xA070D92d743eB7B50cD366596698490c81FF8Bc9";
 const abi = contract.abi;
 
 const Div = styled("div")(({ theme }) => ({
